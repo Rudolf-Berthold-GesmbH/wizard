@@ -28,7 +28,7 @@
             <div class="flex">
               <AnimatedTooltip :items="people" />
             </div>
-            <Nuxt-Link to="/about" class="m-auto">
+            <Nuxt-Link to="/avatars" class="m-auto">
               <span class="font-light text-neutral-600">more</span>
             </Nuxt-Link>
           </div>
