@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('relative h-dvh w-dvw', props.containerClass)">
+  <div :class="cn('relative h-full w-full', props.containerClass)">
     <div
       ref="containerRef"
       v-motion
