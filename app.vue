@@ -8,19 +8,23 @@
       class="absolute inset-0 flex items-center justify-center px-8"
     >
       <div class="flex size-full max-w-6xl flex-col md:flex-row">
-        <div
-          class="flex size-full flex-col items-center justify-center"
-        >
-          <span
-            class="gap-2 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-left md:text-6xl"
-          >
-            Berthold Wizard
-          </span>
-          <span
-            class="gap-2 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-center text-xl font-medium text-transparent md:text-left md:text-3xl"
-          >
-            cooming soon
-          </span>
+        <div class="m-auto flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <RadiantText
+              class="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400"
+              :duration="5"
+            >
+              <span class="text-3xl font-bold">🧙🏻‍♂️ Berthold Wizard</span>
+            </RadiantText>
+          </div>
+          <div class="z-10 flex flex-col gap-2">
+            <RainbowButton disabled>Spielen</RainbowButton>
+            <RainbowButton disabled>Leaderboard</RainbowButton>
+            <RainbowButton>Anleitung</RainbowButton>
+          </div>
+          <div class="flex justify-center">
+            <AnimatedTooltip :items="people" />
+          </div>
         </div>
       </div>
     </Vortex>
@@ -28,5 +32,48 @@
 </template>
 
 <script lang="ts" setup>
-
+const people = [
+  {
+    id: 1,
+    name: "Alex",
+    designation: "Software Engineer",
+    image:
+      "/images/avatars/Alex-2.png",
+  },
+  {
+    id: 2,
+    name: "Thomas",
+    designation: "CTO",
+    image:
+      "/images/avatars/Thomas.png",
+  },
+  {
+    id: 3,
+    name: "Joachim",
+    designation: "CEO",
+    image:
+      "/images/avatars/Joachim.png",
+  },
+  {
+    id: 4,
+    name: "Mani",
+    designation: "Techniker",
+    image:
+      "/images/avatars/Mani.png",
+  },
+  {
+    id: 5,
+    name: "Sandro",
+    designation: "Software Engineer",
+    image:
+      "/images/avatars/Sandro.png",
+  },
+  {
+    id: 6,
+    name: "Oliver",
+    designation: "Software Engineer",
+    image:
+      "/images/avatars/Oliver.png",
+  },
+];
 </script>
